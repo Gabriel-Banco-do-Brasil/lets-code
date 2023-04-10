@@ -1,0 +1,60 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public static void main(String[] args) {
+
+
+}
+
+interface Calculate {
+    
+    private double value1;
+    private double value2;
+    public void operate();
+    
+}
+
+class CalculateAdd implements Calculate {
+    
+    private double value1;
+    private double value2;
+    
+    public void operate() {
+    }
+    
+}
+
+class CalculateSub implements Calculate {
+    
+    private double value1;
+    private double value2;
+    
+    public void operate() {
+    }
+    
+}
+
+class CalculateDiv implements Calculate {
+    
+    private double value1;
+    private double value2;
+    
+    public void operate() {
+    }
+    
+}
+
+class CalculateMult implements Calculate {
+    
+    private double value1;
+    private double value2;
+    
+    public void operate() {
+    }
+    
+}

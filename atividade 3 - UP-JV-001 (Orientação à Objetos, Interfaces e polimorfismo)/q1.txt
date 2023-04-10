@@ -1,0 +1,99 @@
+public class ControladorDePedidoDeCredito {
+
+    private PedidoRepository pedidoRepository;
+
+    public void processar(PedidoDeCredito pedido) {
+
+        // lógica de validação {{Proposta do exercício}}
+
+        // validações de nulos
+
+        // validação de idade > 18
+
+        // validação de CPF
+
+        // validação de tempo de conta > 1 ano
+
+        // validação de conta salário >= 1500 reais
+
+        pedidoRepository.salvar(pedido);
+
+    }
+
+}
+
+public class PedidoDeCredito {
+
+    String nome, sobreNome;
+
+    LocalDate dataNascimento;
+
+    LocalDate dataAberturaConta;
+
+    String CPF;
+
+    boolean contaSalario;
+
+    double salarioMensal;
+
+}
+
+public interface ValidacaoPedidoDeCredito {
+
+    public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException;
+
+}
+
+public class ValidaNulos implements ValidacaoPedidoDeCredito  {
+
+	public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException {
+
+	}
+
+}
+
+public class ValidaIdade implements ValidacaoPedidoDeCredito  {
+
+	public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException {
+
+	}
+
+}
+
+public class ValidaCPF implements ValidacaoPedidoDeCredito  {
+
+	public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException {
+
+	}
+
+}
+
+public class ValidaTempoDeConta implements ValidacaoPedidoDeCredito  {
+
+	public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException {
+
+	}
+
+}
+
+public class ValidaContaSalario implements ValidacaoPedidoDeCredito  {
+
+	public void validar(PedidoDeCredito pedido) throws ValidacaoPedidoDeCreditoException {
+
+	}
+
+}
+
+public class ValidacaoHandler {
+
+	
+
+}
+
+public class ValidationException extends Exception {
+    public ValidationException(String message) {
+        super(message);
+    }
+
+    private static final long serialVersionUID = 1L;
+}

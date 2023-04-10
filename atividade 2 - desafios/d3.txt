@@ -1,0 +1,39 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+        Map<Integer, Wrapper> map = new HashMap<>();
+        
+        map.put(1, new Wrapper("Estagiário", 3.0));
+        map.put(2, new Wrapper("Recepcionista", 5.0));
+        map.put(3, new Wrapper("Secretário", 6.0));
+        map.put(4, new Wrapper("Gerente", 8.0));
+        
+        int job_code = Integer.parseInt(args[0]);
+        double salary = Double.parseDouble(args[1]);
+        
+        
+        
+        System.out.println("Cargo: " + map.get(job_code).getJob());
+        System.out.println("Valor do Aumento: " + salary * ( map.get(job_code).getSalary_increase_percentage() / 100 ));
+        System.out.println("Novo Salário: " + salary * ( 1 + ( map.get(job_code).getSalary_increase_percentage() / 100 )));
+
+	}
+
+}
+
+class Wrapper {
+    private String job;
+    private Double salary_increase_percentage;
+    
+    public Wrapper(String job, Double salary_increase_percentage) {
+       this.job = job;
+       this.salary_increase_percentage = salary_increase_percentage;
+    }
+
+    public String getJob() { return this.job; }
+    public Double getSalary_increase_percentage() { return this.salary_increase_percentage; }
+
+
+}

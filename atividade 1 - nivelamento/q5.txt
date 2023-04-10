@@ -1,0 +1,40 @@
+public class Main
+{
+	public static void main(String[] args) {
+	    double[] user_n_inputs = new double[args.length];
+	    
+	    for (int i = 0; i < user_n_inputs.length; i++) {
+	        user_n_inputs[i] = Double.parseDouble(args[i]);
+	    }
+	    
+	    user_n_inputs = sort(user_n_inputs);
+	    
+	    System.out.println("O maior valor do conjunto é: " + user_n_inputs[user_n_inputs.length - 1]);
+	    System.out.println("O menor valor do conjunto é: " + user_n_inputs[0]);
+	    System.out.println("A soma do maior com o menor valor do conjunto é: " + (user_n_inputs[user_n_inputs.length - 1] + user_n_inputs[0]));
+
+	}
+	
+	public static double[] sort(double[] user_n_inputs) {
+	    
+	    for (int i = 0; i < user_n_inputs.length; i++) {
+            for (int j = i + 1; j < user_n_inputs.length; j++) {
+ 
+                double temp = 0;
+                if (user_n_inputs[j] < user_n_inputs[i]) {
+ 
+                    temp = user_n_inputs[i];
+                    user_n_inputs[i] = user_n_inputs[j];
+                    user_n_inputs[j] = temp;
+                    
+                }
+                
+            }
+            
+        }
+        
+        return user_n_inputs;
+        
+	}
+	
+}

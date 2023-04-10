@@ -1,0 +1,27 @@
+public class Main
+{
+    
+	public static void main(String[] args) {
+	    
+	    int base = Integer.parseInt(args[0]);
+	    int exponent = Integer.parseInt(args[1]);
+	    
+	    System.out.println(pow(base, exponent));
+	    
+	}
+	
+	public static long pow(long base, long exponent) {
+
+        if (exponent == 1) return base;
+
+        if (exponent % 2 == 0) {
+            long half = pow(base, exponent / 2);  
+            return half * half;
+        } else {
+            long half = pow(base, (exponent - 1) / 2);
+            return half * half * base;
+        }
+
+    }
+	    
+}

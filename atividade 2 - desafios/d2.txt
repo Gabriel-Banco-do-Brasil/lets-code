@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+	    String name = args[0];
+	    int grades_avarage = (Integer.parseInt(args[1]) + Integer.parseInt(args[2]) + Integer.parseInt(args[3])) / 3;
+	    
+	    System.out.println("Aluno: " + name);
+	    
+	    if( grades_avarage >= 0 && grades_avarage <= 50 ) {
+	        
+	        System.out.println("Situação: REPROVADO");
+	        
+	    } else if (grades_avarage >= 51 && grades_avarage <= 69) {
+	        
+	        System.out.println("Situação: RECUPERACAO");
+	        
+	    } else if (grades_avarage >= 70 && grades_avarage <= 100){
+	        
+	        System.out.println("Situação: APROVADO");
+	        
+	    }
+	    
+	}
+
+}

@@ -1,0 +1,36 @@
+public class Main
+{
+    
+    static int j = 2;
+    
+	public static void main(String[] args) {
+	    
+	    for (int i = 2; i <= 97; i++) {
+	        
+	        if (is_prime(i)) {
+	            System.out.print(i + " ");
+	        }
+	        
+	        j = 2;
+	        
+	    }
+	    
+	}
+	
+	public static boolean is_prime(int n) {
+ 
+        if (n == j) {
+            return true;
+        }
+ 
+        if (n % j == 0) {
+            return false;
+        }
+        
+        j++;
+        
+        return is_prime(n);
+        
+    }
+	    
+}
